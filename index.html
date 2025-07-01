@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <form id="age-form" class="card__form">
+                <div class="card__inputContainer">
+                    <label for="day" class="card__lable">Day</label>
+                    <input id="day" data-lengthdigits="2" name="day" class="card__input" placeholder="DD" min="1" max="31" type="number">
+                    <span class="card__errorMessage">must be a valid day</span>
+                </div>
+                <div class="card__inputContainer">
+                    <label for="month" class="card__lable">Month</label>
+                    <input id="month" data-lengthdigits="2" name="month" class="card__input" placeholder="MM" min="1" max="12" type="number">
+                    <span class="card__errorMessage">must be a valid month</span>
+                </div>
+                <div class="card__inputContainer">
+                    <label for="year" class="card__lable">Year</label>
+                    <input id="year" data-lengthdigits="4" name="year" class="card__input" placeholder="YYYY" min="1" max="2025" type="number">
+                    <span class="card__errorMessage">must be a valid year</span>
+                </div>
+            </form>
+
+            <div class="card__sparator">
+                <button class="card__button">Calculate</button>
+            </div>
+
+            <div class="card__result">
+                <span class="card__resultLable">You are </span>
+                <span class="card__resultValue">--</span>
+                <span class="card__resultLable">Years old</span>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="main.js"></script>
+</body>
+</html>

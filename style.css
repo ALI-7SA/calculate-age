@@ -1,0 +1,169 @@
+/* CSS Reset */
+:root {
+  --color-bg: #f0f0f0;
+  --color-purple: #864cff;
+  --color-light-gray: #dbdbdbff;
+  --color-gray: #8a8a8a;
+  --color-black: #151515;
+  --color-white: #ffffff;
+  --color-red: #ff5757ff;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* End CSS Reset */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+.card {
+  width: 100%;
+  max-width: 50rem;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  padding: 3rem;
+  margin: 0 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.card__form {
+  display: flex;
+  gap: 1.5rem;
+
+  .card__lable {
+    display: block;
+    color: var(--color-gray);
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card__inputContainer {
+    flex: 1;
+  }
+
+  .card__input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    outline: none;
+    border: 0.1rem solid var(--color-gray);
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+    border-color: var(--color-light-gray);
+    transition: all 0.4s;
+
+    &:focus {
+      border: 0.1rem solid var(--color-purple);
+    }
+  }
+
+  .card__errorMessage {
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: var(--color-red);
+    font-weight: var(--font-weight-regular);
+    visibility: hidden;
+    opacity: 0;
+
+    transition: visibility 4s ease, opacity 0.4s ease;
+  }
+
+  .card__input--error + .card__errorMessage {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.card__sparator {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+
+  .card__button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    z-index: 1;
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    background-color: var(--color-purple);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 0.2rem;
+    width: 100%;
+    background-color: var(--color-light-gray);
+  }
+}
+
+.card__result {
+  font-size: 3.6rem;
+  font-weight: var(--font-weight-extra-bold);
+  font-style: italic;
+  text-align: center;
+
+  .card__resultValue {
+    color: var(--color-purple);
+  }
+}
