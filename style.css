@@ -167,3 +167,24 @@ body {
     color: var(--color-purple);
   }
 }
+
+
+@media (max-width: 375.98px) {
+  .card {
+    margin: 1rem;
+  }
+
+  .card__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card__result {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card__resultLable {
+    font-size: 2rem;
+  }
+}
